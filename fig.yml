@@ -1,0 +1,14 @@
+web:
+  build: .
+  # command: python app.py
+  links:
+   - db:db
+   - cache:cache
+  ports:
+   - "8000:8000"
+
+db:
+  image: postgres:9.3
+
+cache:
+  image: atbaker/memcached-verbose:latest
