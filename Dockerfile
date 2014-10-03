@@ -1,4 +1,4 @@
-# Foo
+# Dockerfile for sample Django application
 
 FROM python:2.7-onbuild
 

@@ -1,14 +1,13 @@
-web:
+django:
   build: .
-  # command: python app.py
   links:
-   - db:db
-   - cache:cache
+   - postgres:db
+   - memcached:cache
   ports:
    - "8000:8000"
 
-db:
+postgres:
   image: postgres:9.3
 
-cache:
+memcached:
   image: atbaker/memcached-verbose:latest
